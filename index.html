@@ -13,7 +13,9 @@
     </div>
     <!-- maps at the abackground ends -->
     <!-- status displayed -->
-
+<div class="status_displayed">
+The Cleaner will reach in 15mins
+ 	</div>
     <!-- status displayed ended -->
     <!-- loading screen started  -->
     <div class="loading-screen">
@@ -60,7 +62,7 @@
 	<div id="my_camera"></div>
 	<script type="text/javascript" src="js/webcam.min.js"></script>
 	<form>
-		<input type='button' value="Take Snapshot" onClick="take_snapshot();$('.camera-section').hide()">
+		<input type='button' value="Take Snapshot" onClick="take_snapshot();$('.camera-section').hide();status_displayed();" class="snapshot-button">
 	</form>
 	<script>
 		Webcam.set({
@@ -78,7 +80,7 @@
 				document.getElementById('results').innerHTML = 
 					'<h2>Here is your image:</h2>' + 
 					'<img src="'+data_uri+'"/>';
-					status_displayed();
+					
 			} );
 		}
 	</script>

@@ -29,8 +29,7 @@ function closeNav() {
 
 }
 $(".selector div").on("click",function(){
-				$(".status").html("");
-
+	$(".status").html("");
 	$(".selector div").css("background-color","white");
 	$(".selector div").css("color","#171123");
 	$(this).css("background-color","#171123");
@@ -51,3 +50,11 @@ function validate()
 		}
 }
 
+function status_displayed()
+{
+	setTimeout(function(){
+			
+			$(".camera-section").hide();
+	},1000);
+	$(".status_displayed").show();
+}

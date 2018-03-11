@@ -4,162 +4,161 @@ map 		    	0
 
 */
 
+* {
+    font-family: lato;
+}
 
+.map {
+    width: 100vw;
+    height: 100vh;
+}
 
-*
-{
-	font-family: lato;
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
-.map
-{
-	width: 100vw;
-	height: 100vh;
+
+.loading-screen {
+    z-index: 500;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #171123;
 }
-body
-{
-	width: 100vw;
-	height: 100vh;
-	margin:0;
-	padding: 0;
-	
+
+.overlay {
+    z-index: 200;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*background-color: #171123;*/
 }
-.loading-screen
-{
-	z-index: 500;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	width:100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background-color: #171123;
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
+    width: 80%;
+    height: 50%;
+    background-color: #171123;
 }
-.overlay
-{
-	z-index: 200;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	width:100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	/*background-color: #171123;*/
+
+.selector {
+    width: 100%;
+    overflow: hidden;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px 2px 0px 0px;
+    background-color: white;
 }
-.login
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: center;
-	border-radius:5px;
-	width: 80%;
-	height: 50%;
-	background-color: #171123;
+
+.public {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: none;
+    color: white;
+    width: calc(100% / 3);
+    height: 100%;
+    background-color: #171123;
 }
-.selector
-{
-	width: 100%;
-	overflow: hidden;
-	height: 50px;
-	display: flex;
-	flex-direction: row;
-	border-radius: 2px 2px 0px 0px;
-	background-color: white;
+
+.cleaner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: none;
+    color: #171123;
+    width: calc(100% / 3);
+    height: 100%;
+    background-color: white;
 }
-.public
-{
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	border: none;
-	color:white;
-	width: calc(100% / 3);
-	height:100%;
-	background-color: #171123;
+
+.signup {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: none;
+    color: #171123;
+    width: calc(100% / 3);
+    height: 100%;
+    background-color: white;
 }
-.cleaner
-{
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	border: none;
-	color:#171123;
-	width: calc(100% / 3);
-	height:100%;
-	background-color: white;	
+
+.login-field {
+    display: flex;
+    align-self: center;
+    width: 80%;
+    height: 40px;
+    background: none;
+    border: none;
+    border-bottom: 2px black solid;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    font-size: 1.5em;
+    color: white;
 }
-.signup
-{
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	border: none;
-	color:#171123;
-	width: calc(100% / 3);
-	height:100%;
-	background-color: white;
+
+.login-field::placeholder {
+    color: white;
+    font-size: 1em;
 }
-.login-field
-{
-	display: flex;
-	align-self: center;
-	width: 80%;
-	height:40px;
-	background:none;
-	border:none;
-	border-bottom: 2px black solid;
-	padding: 10px;
-	margin:20px 0 0 0;
-	font-size: 1.5em;
-	color: white;
+
+input:focus {
+    outline: none;
 }
-.login-field::placeholder
-{
-	color:white;
-	font-size: 1em;
-}
-input:focus
-{
-	outline: none;
-}
-/*.signup
-{
-	margin:15px 0;
-	padding:5px;
-	font-size: 1.1em;
-	color:white;
-}*/
-input[type="submit"]
-{
-	background-color: white;
-	width: 100px;
-	height:50px;
-	border:none;
-	margin:5px;
+
+input[type="submit"] {
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    border: none;
+    margin: 5px;
 }
 
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
 }
+
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -169,12 +168,16 @@ input[type="submit"]
     transition: 0.3s;
 }
 
+
 /* When you mouse over the navigation links, change their color */
+
 .sidenav a:hover {
     color: #f1f1f1;
 }
 
+
 /* Position and style the close button (top right corner) */
+
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -183,39 +186,72 @@ input[type="submit"]
     margin-left: 50px;
 }
 
+
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
 #main {
     transition: margin-left .5s;
     padding: 20px;
 }
 
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
-.icon-sidebar
-{
-	position: absolute;
-	top:5px;
-	left:5px;
-		
+
+.icon-sidebar {
+    position: absolute;
+    top: 5px;
+    left: 5px;
 }
-.icon-sidebar i
-{
-	width: 50px;
+
+.icon-sidebar i {
+    width: 50px;
 }
-.camera-section
-{
-	position: absolute;
-	top:0;
-	display: flex;
+
+.camera-section {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 250;
+    flex-direction: column;
+}
+
+.snapshot-button {
+    height: 80px;
+    width: 100vw;
+    background-color: #171123;
+    color: white;
+    font-size: 2em;
+    border: none;
+    opacity: 0.8;
+}
+
+.status_displayed {
+	display: none;
+    z-index: 5;
+    top: 50vh;
+    left: 0;
 	align-items: center;
 	justify-content: center;
-	align-content: center;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: 250;
-	flex-direction: column;
+    height: 80px;
+    width: 100vw;
+    background-color: #171123;
+    color: white;
+    font-size: 1.8em;
+    border: none;
+    opacity: 0.8;
 }
