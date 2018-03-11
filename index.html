@@ -20,7 +20,6 @@ The Cleaner will reach in 15mins
     <!-- loading screen started  -->
     <div class="loading-screen">
         <img src="img/logo.svg" alt="">
-
     </div>
     <!-- loading screen ended -->
     <!-- overlay started -->
@@ -36,10 +35,13 @@ The Cleaner will reach in 15mins
                 <div class="signup" onclick="account='signup'">
                 	Sign Up
             	</div>
+
             </div>
             <input type="text" class="login-field" placeholder="Username">
-            <input type="text" class="login-field" placeholder="Password">
-    		<div class="status">	</div>
+            <input type="password" class="login-field" placeholder="Password">
+            <input type="text" class="login-field signup-field" placeholder="Cell Number" >
+            <input type="text" class="login-field signup-field" placeholder="Email Address" >
+    		<div class="status">The app is not working properly</div>
             <input type="submit" onclick="validate()">
         </div>
     </div>
@@ -97,7 +99,8 @@ The Cleaner will reach in 15mins
         var uluru = { lat: -25.363, lng: 131.044 };
         var map = new google.maps.Map($(".map")[0], {
             zoom: 4,
-            center: uluru
+            center: uluru,
+            mapTypeControl:false
         });
         var marker = new google.maps.Marker({
             position: uluru,

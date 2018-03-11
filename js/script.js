@@ -23,8 +23,7 @@ function openNav() {
 function closeNav() {
     $("#mySidenav *").hide();
     document.getElementById("mySidenav").style.width = "0";
-    		$(".map").css("filter","blur(0px)");
-		
+    	$(".map").css("filter","blur(0px)");		
 		$(".map").css("pointer-events","all");
 
 }
@@ -34,6 +33,16 @@ $(".selector div").on("click",function(){
 	$(".selector div").css("color","#171123");
 	$(this).css("background-color","#171123");
 	$(this).css("color","white");
+	if(account=='signup')
+{
+	$(".signup-field").show();
+	$(".login").css("height","60%");
+}
+else
+{
+$(".signup-field").hide();
+	$(".login").css("height","50%");	
+}
 });
 function validate()
 {
@@ -55,6 +64,6 @@ function status_displayed()
 	setTimeout(function(){
 			
 			$(".camera-section").hide();
-	},1000);
+	},999);
 	$(".status_displayed").show();
 }
