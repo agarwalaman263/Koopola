@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- maps at the background -->
+    <div class="map">
+    </div>
+    <!-- maps at the abackground ends -->
+    <!-- loading screen started  -->
+    <div class="loading-screen">
+        <img src="img/logo.svg" alt="">
+
+    </div>
+    <!-- loading screen ended -->
+    <!-- overlay started -->
+    <div class="overlay">
+        <div class="login">
+            <div class="selector">
+                <div class="public" onclick="account='public'">
+                    Public
+                </div>
+                <div class="cleaner" onclick="account='cleaner'">
+                    CLeaners
+                </div>
+            </div>
+            <input type="text" class="login-field" placeholder="Username">
+            <input type="text" class="login-field" placeholder="Password">
+            <div class="signup">Signup</div>
+
+            <input type="submit" onclick="validate()">
+        </div>
+    </div>
+    <!-- overlay ended -->
+    <!-- sidebar started	 -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" onclick="closeNav();$('.camera-section').css('display','flex');">Capture a snap</a>
+            <a href="#">Change Password</a>
+            <a href="#">Logout</a>
+
+        </div>
+        <div class="icon-sidebar"><i class="fa fa-bars" onclick="openNav()" width="50px"></i></div>
+    
+    <!-- sidebar ended -->
+    <!-- dialog box -->
+<div class="camera-section" style="display: none">	
+  	<div id="results"></div>
+	
+	<div id="my_camera"></div>
+	<script type="text/javascript" src="js/webcam.min.js"></script>
+	<form>
+		<input type='button' value="Take Snapshot" onClick="take_snapshot();$('.camera-section').hide()">
+	</form>
+	<script>
+		Webcam.set({
+			width: 300,
+			height: 300,
+			image_format: 'jpeg',
+			jpeg_quality: 90
+		});
+		Webcam.attach( '#my_camera' );
+		function take_snapshot() {
+			// take snapshot and get image data
+			console.log("INside snapsot");
+			Webcam.snap( function(data_uri) {
+				// display results in page
+				document.getElementById('results').innerHTML = 
+					'<h2>Here is your image:</h2>' + 
+					'<img src="'+data_uri+'"/>';
+			} );
+		}
+	</script>
+</div>
+
+    <!-- dialog box ends -->
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+    function initMap() {
+        var uluru = { lat: -25.363, lng: 131.044 };
+        var map = new google.maps.Map($(".map")[0], {
+            zoom: 4,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC72mJzdE2VWFQehsVCyIvOYHvMbhTZmqQ&callback=initMap" async defer></script>
+</body>
+
+</html>
