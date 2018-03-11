@@ -81,7 +81,7 @@ body
 	align-items: center;
 	border: none;
 	color:white;
-	width: 50%;
+	width: calc(100% / 3);
 	height:100%;
 	background-color: #171123;
 }
@@ -93,9 +93,21 @@ body
 	align-items: center;
 	border: none;
 	color:#171123;
-	width: 50%;
+	width: calc(100% / 3);
 	height:100%;
 	background-color: white;	
+}
+.signup
+{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	border: none;
+	color:#171123;
+	width: calc(100% / 3);
+	height:100%;
+	background-color: white;
 }
 .login-field
 {
@@ -120,13 +132,13 @@ input:focus
 {
 	outline: none;
 }
-.signup
+/*.signup
 {
 	margin:15px 0;
 	padding:5px;
 	font-size: 1.1em;
 	color:white;
-}
+}*/
 input[type="submit"]
 {
 	background-color: white;

@@ -29,6 +29,8 @@ function closeNav() {
 
 }
 $(".selector div").on("click",function(){
+				$(".status").html("");
+
 	$(".selector div").css("background-color","white");
 	$(".selector div").css("color","#171123");
 	$(this).css("background-color","#171123");
@@ -36,8 +38,16 @@ $(".selector div").on("click",function(){
 });
 function validate()
 {
+
+		if(account=='signup')
+		{
+			$(".status").html("EMail has been send")
+		}
+		else
+		{
 			$(".map").css("filter","blur(0px)");
 		$(".map").css("pointer-events","all");
-		$('.overlay').fadeOut();
+		$('.overlay').fadeOut();			
+		}
 }
 
